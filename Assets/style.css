@@ -1,6 +1,7 @@
 * {
     font-family: 'Bebas Neue', cursive;
     font-family: 'Kdam Thmor Pro', sans-serif;
+    scroll-behavior: smooth;
 }
 
 section {
@@ -25,7 +26,7 @@ section {
 
 footer {
     height: 500px;
-    background-color: black;
+    background-color: rgb(22, 15, 145);
     border-radius: 10px;
 
 }
@@ -34,6 +35,12 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    background-color: rgb(30, 30, 41);
+}
+
+a {
+    text-decoration: none;
+    color: rgb(237, 215, 215);
 }
 
 ul {
@@ -45,6 +52,7 @@ ul {
     font-weight: bold;
     color: white;
 }
+
 
 li {
     /* width: 200px; */
@@ -67,11 +75,63 @@ p {
     height: 100%;
     justify-content: space-between;
     align-items: center;
+    position: relative;
+
 }
+
+.scroll-down {
+    height: 50px;
+    width: 30px;
+    border: solid black 2px;
+    position: absolute;
+    left: 50%;
+    bottom: 15%;
+    border-radius: 50px;
+    cursor: pointer;
+}
+
+.scroll-down::before,
+.scroll-down::after {
+    content: "";
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    border: solid black 2px;
+    height: 10px;
+    width: 10px;
+    transform: translate(-50%, -80%) rotate(45deg);
+    border-top: transparent;
+    border-left: transparent;
+    animation: scroll-down 1s ease-in-out infinite;
+}
+
+.scroll-down::after {
+    top: 15%;
+    animation-delay: .3s;
+}
+
+@keyframes scroll-down {
+    0% {
+        opacity: 0;
+    }
+    30% {
+        opacity: 1;
+    }    
+    60% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+        top: 90%;
+    }
+ }
+
+
 
 .hero-text {
     margin-left: 80px;
     margin-bottom: 400px;
+    position: absolute;
 }
 
 .button {
@@ -83,6 +143,8 @@ p {
     height: 60px;
     font-weight: lighter;
     color: black;
+    text-decoration: none;
+    margin: 15px;
 }
 
 .button:hover {
@@ -101,6 +163,37 @@ p {
 }
 
 .selfie {
-    display: inline-flex;
+    width: 500px;
+    display: flex;
     margin: 20px;
+    border-radius: 40px;
+    border: solid black 10px;
 }
+
+.sub-section {
+    display: flex;
+    justify-content: space-around;
+    padding: 150px;
+    background-color: #79b4b4;
+}
+h2 {
+    font-size: 40px;
+    text-align: left;
+}
+
+.socials {
+    align-items: center;
+}
+
+@media screen and (max-width: 1688px) {
+    nav {
+      background: #f62206;
+    }
+  }
+
+@media screen and (max-width: 778px) {
+    nav {
+        background:rgb(35, 186, 186)
+    }
+}
+  
