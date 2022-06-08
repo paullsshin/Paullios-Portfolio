@@ -190,6 +190,7 @@ p {
     text-align: center;
     padding: 50px;
     height: 100vh;
+    background-color: #236868;
 }
 
 h2 {
@@ -219,6 +220,7 @@ h2 {
     box-shadow: 3px 8px 25px rgb(47, 38, 38);
     padding-bottom: 200px;
     margin: 10px;
+    background-color: rgb(29, 111, 183);
 }
 
 
@@ -246,3 +248,15 @@ hr {
     background-color: black;
 }
   
+.project-links {
+    color: #320668;
+}
+
+.contact-me {
+    height: 100vh;
+}
+
+h4 {
+    text-align: center;
+    font-size: 50px;
+}
